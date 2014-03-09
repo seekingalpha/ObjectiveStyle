@@ -8,6 +8,22 @@ Feel free to suggest pull requests.
 
 ## Table of contents
 
+* [Dot Notation](https://github.com/seekingalpha/ObjectiveStyle#dot-notation)
+* [When using braces...](https://github.com/seekingalpha/ObjectiveStyle#when-using-braces)
+* [Declaring and returning methods](https://github.com/seekingalpha/ObjectiveStyle#declaring-and-returning-methods)
+* [The ternary operator](https://github.com/seekingalpha/ObjectiveStyle#the-ternary-operator)
+* [Objective-C literals](https://github.com/seekingalpha/ObjectiveStyle#objective-c-literals)
+* [Commenting](https://github.com/seekingalpha/ObjectiveStyle#commenting)
+* [Golden path](https://github.com/seekingalpha/ObjectiveStyle#golden-path)
+* [CGGeometry](https://github.com/seekingalpha/ObjectiveStyle#cggeometry)
+* [Enum](https://github.com/seekingalpha/ObjectiveStyle#enum)
+* [Image naming](https://github.com/seekingalpha/ObjectiveStyle#image-naming)
+* [Singleton creation](https://github.com/seekingalpha/ObjectiveStyle#singleton-creation)
+* [instancetype](https://github.com/seekingalpha/ObjectiveStyle#instancetype)
+* [General considerations](https://github.com/seekingalpha/ObjectiveStyle#general-considerations)
+* [Organization and care](https://github.com/seekingalpha/ObjectiveStyle#organization-and-care)
+* [Le grans finale](https://github.com/seekingalpha/ObjectiveStyle#le-grand-finale)
+
 ## Dot notation
 
 Dot-notation should **always** be used for accessing and mutating properties. Bracket notation **should not be used** for properties, only for methods.
@@ -188,7 +204,7 @@ Comments should be used to:
 
 All comments used must be kept up-to-date or deleted. Wrong comments lead to errors.
 
-##Golden Path
+##Golden path
 When coding with conditionals, the left hand margin of the code should be the "golden" or "happy" path. That is, don't nest `if` statements. Multiple return statements are OK.
 
 ###Do:
@@ -268,7 +284,7 @@ Init methods should return instancetype instead of id. This is better for check 
 
 	- (id)initWithText:(NSString *)text;
 	
-## General Considerations
+## General considerations
 
 Variables should be named as descriptively as possible (and single letter variable names should be avoided except, in `for( )` loops). Asterisks indicating pointers belong with the variable, e.g., `NSString \*text` **not** `NSString\* text` or `NSString \* text`. Property definitions should be used in place of naked instance variables **whenever possible**. Direct instance variable access should be avoided except in initializer methods (init, initWithCoder:, etc…), dealloc methods and within custom setters and getters. For more information on using Accessor Methods in Initializer Methods and dealloc, see [here](https://www.google.com/url?q=https%3A%2F%2Fdeveloper.apple.com%2Flibrary%2Fmac%2Fdocumentation%2FCocoa%2FConceptual%2FMemoryMgmt%2FArticles%2FmmPractical.html%23%2F%2Fapple_ref%2Fdoc%2Fuid%2FTP40004447-SW6&sa=D&sntz=1&usg=AFQjCNHrj-h-GQ709HPjtcdvjx-5XZcU0Q "Use Accessor Methods to Make Memory Management Easier").
 

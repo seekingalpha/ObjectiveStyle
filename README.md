@@ -16,7 +16,7 @@ Feel free to suggest pull requests.
 * [Commenting](https://github.com/seekingalpha/ObjectiveStyle#commenting)
 * [Golden path](https://github.com/seekingalpha/ObjectiveStyle#golden-path)
 * [CGGeometry](https://github.com/seekingalpha/ObjectiveStyle#cggeometry)
-* [Enum](https://github.com/seekingalpha/ObjectiveStyle#enum)
+* [Typedef Enum](https://github.com/seekingalpha/ObjectiveStyle#Typedef-Enum)
 * [Image naming](https://github.com/seekingalpha/ObjectiveStyle#image-naming)
 * [Singleton creation](https://github.com/seekingalpha/ObjectiveStyle#singleton-creation)
 * [instancetype](https://github.com/seekingalpha/ObjectiveStyle#instancetype)
@@ -236,12 +236,12 @@ When accessing x, y, width or height of a CGRect, always use CGGeometry function
 	CGFloat originY = self.view.frame.origin.y;
 	CGFloat middleY = self.view.frame.origin.y +  self.view.frame.size.heigth/2;
 
-## Enum
+## Typedef Enum
 
 Enumerated types should follow the new type specification, as it has stronger type checking and code completion. 
 
 ###Do:
-	typedef NS_ENUM(NSIntefer, SALContentType) {
+	typedef NS_ENUM(NSInteger, SALContentType) {
 	    SALContentTypeArticle,
 	    SALContentTypeMarketCurrent,
 	}

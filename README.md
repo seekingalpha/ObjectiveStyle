@@ -244,7 +244,7 @@ Enumerated types should follow the new type specification, as it has stronger ty
 	typedef NS_ENUM(NSInteger, SALContentType) {
 	    SALContentTypeArticle,
 	    SALContentTypeMarketCurrent,
-	}
+	};
 
 ## Image naming
 Images should be named consistently to preserve organization and developer sanity. They should be named as one camel case (without underscores) string with a description of their purpose, followed by the un-prefixed name of the class or property they are customizing (if there is one), followed by a further description of color and/or placement, and finally their state.

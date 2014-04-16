@@ -85,13 +85,13 @@ There is no need to compare results to NO or YES in conditionals.
     
 ###Do:
 
-	if (user.isPro)
+	if (user.isCool)
 
 	if (![user canDoSomething])	
 	
 ###Don't:
 
-	if (user.isPro == YES)
+	if (user.isCool == YES)
 
 	if ([user canDoSomething] == NO)
 	
@@ -330,7 +330,7 @@ A three letter prefix should always be used for class names and constants (only 
 
 If the name of a `BOOL` property is an adjective, the property should omit the “is” prefix, but should specify the conventional name for the get accessor.
 
-	@property (assign, getter=isPro) BOOL pro;
+	@property (assign, getter=isCool) BOOL pro;
 
 Indentation should be done with cmd+[ and cmd-] so it is done via Xcode (setting on the preferences, and not with tabs.
 

@@ -178,20 +178,20 @@ When creating instances of NSDictionary, NSArray and NSNumber, prefer [Objective
 ###Do:
 
 	NSNumber *theNumber = @613;
-	NSArray *theArray = @[@”Abc”, @”Def”, @”Ghi”];
-	NSDictionary *theDictionary = @{ @”Name” : @”Natan”, @”Age” : @26 };
+	NSArray *theArray = @[@"Abc", @"Def", @"Ghi"];
+	NSDictionary *theDictionary = @{ @"Name" : @"Natan", @"Age" : @26 };
 	
 In case you need a mutable form, you can do it the following way:
 
 ###Do:
-	NSMutableArray *theMutableArray = [@[@”Abc”, @”Def”, @”Ghi”] mutableCopy];
+	NSMutableArray *theMutableArray = [@[@"Abc", @"Def", @"Ghi"] mutableCopy];
 	
 Also, when accessing your `NSArray`'s and `NSDictionary`'s objects, we recommend you to do it this way:
 
 ###Do:
 	NSString *theString = [theArray firstObject];
 	NSString *theString = theArray[2];
-	NSString *theString = theDictionary[@”Name”];
+	NSString *theString = theDictionary[@"Name"];
 	
 ## Commenting
 
@@ -226,7 +226,7 @@ When coding with conditionals, the left hand margin of the code should be the "g
 	}
 	
 ## CGGeometry
-When accessing x, y, width or height of a CGRect, always use CGGeometry functions, as recommended by Apple: *“your applications should avoid directly reading and writing the data stored in the CGRect data structure. Instead, use the functions described here to manipulate rectangles and to retrieve their characteristics”*. Prefer this methods instead of manipulating CGRect properties - **they can do some work for you**. For more about CGGeometry, check [NSHipster’s post about it](http://www.google.com/url?q=http%3A%2F%2Fnshipster.com%2Fcggeometry%2F&sa=D&sntz=1&usg=AFQjCNGX-KEjXmBVrbxiw20jUyXv2L3UTA).
+When accessing x, y, width or height of a CGRect, always use CGGeometry functions, as recommended by Apple: *“your applications should avoid directly reading and writing the data stored in the CGRect data structure. Instead, use the functions described here to manipulate rectangles and to retrieve their characteristics"*. Prefer this methods instead of manipulating CGRect properties - **they can do some work for you**. For more about CGGeometry, check [NSHipster’s post about it](http://www.google.com/url?q=http%3A%2F%2Fnshipster.com%2Fcggeometry%2F&sa=D&sntz=1&usg=AFQjCNGX-KEjXmBVrbxiw20jUyXv2L3UTA).
 
 ###Do:
 	CGFloat originY = CGRectMinY(self.view.frame);
@@ -319,16 +319,16 @@ A three letter prefix should always be used for class names and constants (only 
 ###Do:
 
 	static const NSTimeInterval SALPostViewControllerFadeAnimationDuration = 0.25;
-	static NSString * const SALAbouViewControllerCompanyName = @”Seeking Alpha”
+	static NSString * const SALAbouViewControllerCompanyName = @"Seeking Alpha";
 	
 ###Don't:
 
 	static conts NSTimeInterval fadetime = 0.25;
-	#define CompanyName @”Seeking Alpha”
+	#define CompanyName @"Seeking Alpha"
 	
 `dealloc` methods should be placed at the top of the implementation, directly after `@synthesize` and `@dynamic`. `init` should be placed directly below `dealloc`.
 
-If the name of a `BOOL` property is an adjective, the property should omit the “is” prefix, but should specify the conventional name for the get accessor.
+If the name of a `BOOL` property is an adjective, the property should omit the “is" prefix, but should specify the conventional name for the get accessor.
 
 	@property (assign, getter=isCool) BOOL pro;
 

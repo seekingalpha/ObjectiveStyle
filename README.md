@@ -203,6 +203,9 @@ Comments should be used to:
 * Generate documentation from comments written in header classes.
 
 All comments used must be kept up-to-date or deleted. Wrong comments lead to errors.
+
+Regarding the comment format:
+
 ###Do:
         // Track the current position point
         CGFloat originY = CGRectMinY(self.view.frame);

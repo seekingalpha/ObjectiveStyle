@@ -203,7 +203,12 @@ Comments should be used to:
 * Generate documentation from comments written in header classes.
 
 All comments used must be kept up-to-date or deleted. Wrong comments lead to errors.
-
+###Do:
+        // Track the current position point
+        CGFloat originY = CGRectMinY(self.view.frame);
+###Don't:
+        CGFloat originY = CGRectMinY(self.view.frame); // Track the current position point
+        
 ##Golden path
 When coding with conditionals, the left hand margin of the code should be the "golden" or "happy" path. That is, don't nest `if` statements. Multiple return statements are OK.
 
